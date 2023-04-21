@@ -163,7 +163,7 @@ class iForest(object):
             self.threshold = 0.5
         elif self.scores is not None:
             self.contamination = contamination
-            self.threshold = _update_threshold(self.scores, contamination)
+            self.threshold = _update_threshold(self.scores[1], contamination)
         else:
             print("Threshold is set to 0.5. Train samples must be calculated to update the threshold based on contamination.")
         
